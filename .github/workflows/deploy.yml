@@ -1,0 +1,64 @@
+name: Deploy GoClaw to VPS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-vps
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy to Production VPS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to VPS via SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          passphrase: ${{ secrets.VPS_SSH_PASSPHRASE }}
+          port: ${{ secrets.VPS_PORT || 22 }}
+          script_stop: true
+          script: |
+            echo "=== [1/5] Checking application directory ==="
+            if [ ! -d "/opt/goclaw" ]; then
+              echo "Directory /opt/goclaw not found! Cloning repository..."
+              sudo mkdir -p /opt/goclaw
+              sudo chown -R $USER:$USER /opt/goclaw
+              git clone https://github.com/hnktai/agent.git /opt/goclaw
+            fi
+
+            cd /opt/goclaw
+
+            echo "=== [2/5] Pulling latest code from GitHub ==="
+            git fetch origin main
+            git reset --hard origin/main
+
+            echo "=== [3/5] Verifying environment configuration ==="
+            chmod +x prepare-env.sh
+            ./prepare-env.sh
+
+            echo "=== [4/5] Pulling Docker images and updating containers ==="
+            docker compose -f docker-compose.yml -f docker-compose.postgres.yml pull
+            docker compose -f docker-compose.yml -f docker-compose.postgres.yml up -d
+
+            echo "=== [5/5] Running database migrations ==="
+            docker compose -f docker-compose.yml -f docker-compose.postgres.yml -f docker-compose.upgrade.yml run --rm upgrade
+
+            # Clean up old unused images to save disk space
+            docker image prune -f
+
+            echo "=== Verifying GoClaw Gateway Health ==="
+            sleep 3
+            curl -f -s -o /dev/null http://127.0.0.1:18790/health || (echo "Health check failed!" && exit 1)
+
+            echo "=== Deployment Successfully Completed ==="

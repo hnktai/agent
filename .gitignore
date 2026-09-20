@@ -28,6 +28,7 @@ backup/
 .env*
 !.env.example
 !.env.cloudflared.example
+!.env.production.example
 
 app
 browser-poc
