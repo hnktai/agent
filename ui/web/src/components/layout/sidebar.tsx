@@ -74,14 +74,14 @@ export function Sidebar({ collapsed, onNavItemClick }: SidebarProps) {
       <div className="flex h-14 items-center border-b px-4">
         {!collapsed && (
           <div className="flex items-center gap-2.5">
-            <img src={branding.logoUrl} alt={branding.appName} className="h-8 w-8" />
+            <img src={branding.logoUrl} alt={branding.appName} className="h-8 w-8 shrink-0 object-contain" />
             <span className="text-lg font-bold tracking-tight text-sidebar-primary">
               {branding.appShortName}
             </span>
           </div>
         )}
         {collapsed && (
-          <img src={branding.logoUrl} alt={branding.appName} className="mx-auto h-7 w-7" />
+          <img src={branding.logoUrl} alt={branding.appName} className="mx-auto h-7 w-7 shrink-0 object-contain" />
         )}
       </div>
 

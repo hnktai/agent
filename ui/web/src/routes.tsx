@@ -127,7 +127,7 @@ const TenantSelectorPage = lazyWithRetry(() =>
 function PageLoader() {
   return (
     <div className="flex h-full items-center justify-center">
-      <img src="/goclaw-icon.svg" alt="" className="h-8 w-8 animate-pulse opacity-50" />
+      <img src="/goclaw-icon.svg" alt="" className="h-8 w-8 animate-pulse opacity-50 object-contain" />
     </div>
   );
 }
