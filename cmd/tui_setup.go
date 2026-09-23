@@ -55,7 +55,7 @@ func (m setupTUIModel) View() string {
 		return tuiSuccessStyle.Render("Setup complete!\n")
 	}
 
-	s := tuiHeader("GoClaw — Setup Wizard", m.currentStep, len(m.steps))
+	s := tuiHeader("HNKT AI — Setup Wizard", m.currentStep, len(m.steps))
 	s += "\n"
 
 	// Step indicator

@@ -1,6 +1,6 @@
 {
   "onboarding": {
-    "welcome": "Настройка GoClaw",
+    "welcome": "Настройка HNKT AI",
     "welcomeDesc": "Давайте запустим ваш шлюз",
     "providerStep": "Настройка провайдера",
     "providerStepDesc": "Выберите AI-провайдера и введите свои учётные данные.",
@@ -63,7 +63,7 @@
     "teams": "Команды"
   },
   "about": {
-    "title": "GoClaw Lite",
+    "title": "HNKT AI Lite",
     "subtitle": "Настольная редакция",
     "version": "Версия",
     "edition": "Редакция",
@@ -151,7 +151,7 @@
     "createFailed": "Не удалось создать"
   },
   "update": {
-    "available": "Доступна GoClaw Lite v{{version}}",
+    "available": "Доступна HNKT AI Lite v{{version}}",
     "now": "Обновить сейчас",
     "downloading": "Загрузка обновления...",
     "ready": "Обновление установлено! Перезапустите для применения.",

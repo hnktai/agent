@@ -7,12 +7,12 @@
   "frontend:dev:watcher": "pnpm dev",
   "frontend:dev:serverUrl": "auto",
   "author": {
-    "name": "GoClaw",
+    "name": "HNKT AI",
     "email": "team@goclaw.dev"
   },
   "info": {
-    "companyName": "GoClaw",
-    "productName": "GoClaw Lite",
+    "companyName": "HNKT AI",
+    "productName": "HNKT AI Lite",
     "productVersion": "0.1.0"
   }
 }

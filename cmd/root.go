@@ -23,8 +23,8 @@ var (
 
 var rootCmd = &cobra.Command{
 	Use:   "goclaw",
-	Short: "GoClaw — AI agent gateway",
-	Long:  "GoClaw: multi-agent AI platform with WebSocket RPC, tool execution, and channel integration. A Go port of OpenClaw with enhanced security and multi-tenant support.",
+	Short: "HNKT AI — AI agent gateway",
+	Long:  "HNKT AI: multi-agent AI platform with WebSocket RPC, tool execution, and channel integration. A Go port of OpenClaw with enhanced security and multi-tenant support.",
 	Run: func(cmd *cobra.Command, args []string) {
 		runGateway()
 	},

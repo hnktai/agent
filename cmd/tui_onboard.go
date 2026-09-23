@@ -51,7 +51,7 @@ func (m onboardTUIModel) View() string {
 		return tuiSuccessStyle.Render("Onboard complete! Run 'goclaw setup' next.\n")
 	}
 
-	s := tuiHeader("GoClaw — Onboard", m.currentStep, len(m.steps))
+	s := tuiHeader("HNKT AI — Onboard", m.currentStep, len(m.steps))
 	s += "\n"
 
 	for i, step := range m.steps {

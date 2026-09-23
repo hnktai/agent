@@ -72,7 +72,7 @@
     "title": "How tasks are created",
     "body": "Tasks are created by chatting with the team leader agent. Start a conversation with {{leader}} to create and manage tasks."
   },
-  "editionCompare": "GoClaw Lite vs Standard",
+  "editionCompare": "HNKT AI Lite vs Standard",
   "editionUpgrade": "Upgrade to Standard with PostgreSQL for full features",
   "feature": "Feature",
   "edition": {

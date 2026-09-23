@@ -110,14 +110,14 @@ export function BrandingSection({ data, onSave, saving }: Props) {
             tip={t("branding.appNameTip")}
             value={draft.app_name}
             onChange={(value) => update({ app_name: value })}
-            placeholder="GoClaw"
+            placeholder="HNKT AI"
           />
           <TextField
             label={t("branding.appShortName")}
             tip={t("branding.appShortNameTip")}
             value={draft.app_short_name}
             onChange={(value) => update({ app_short_name: value })}
-            placeholder="GoClaw"
+            placeholder="HNKT AI"
           />
           <TextField
             label={t("branding.themeColor")}
@@ -134,7 +134,7 @@ export function BrandingSection({ data, onSave, saving }: Props) {
             tip={t("branding.metaTitleTip")}
             value={draft.meta_title}
             onChange={(value) => update({ meta_title: value })}
-            placeholder="GoClaw"
+            placeholder="HNKT AI"
           />
           <TextField
             label={t("branding.metaKeywords")}
@@ -158,7 +158,7 @@ export function BrandingSection({ data, onSave, saving }: Props) {
             tip={t("branding.ogTitleTip")}
             value={draft.og_title}
             onChange={(value) => update({ og_title: value })}
-            placeholder="GoClaw"
+            placeholder="HNKT AI"
           />
           <TextField
             label={t("branding.ogDescription")}

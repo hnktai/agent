@@ -21,7 +21,7 @@ func setupCmd() *cobra.Command {
 func runSetup() {
 	fmt.Println()
 	fmt.Println("╭──────────────────────────────────╮")
-	fmt.Println("│     GoClaw — Setup Wizard        │")
+	fmt.Println("│     HNKT AI — Setup Wizard       │")
 	fmt.Println("╰──────────────────────────────────╯")
 	fmt.Println()
 

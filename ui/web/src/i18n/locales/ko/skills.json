@@ -101,7 +101,7 @@
     "statusActive": "활성",
     "statusArchived": "의존성 없음",
     "runtimeMissing": "런타임 전제 조건 없음",
-    "runtimeMissingDesc": "핵심 스킬은 GoClaw 런타임 컨테이너 내에 Python 및/또는 Node.js 런타임이 필요합니다. 호스트에 설치된 런타임은 사용되지 않습니다.",
+    "runtimeMissingDesc": "핵심 스킬은 HNKT AI 런타임 컨테이너 내에 Python 및/또는 Node.js 런타임이 필요합니다. 호스트에 설치된 런타임은 사용되지 않습니다.",
     "runtimeMissingAction": "패키지를 열어 이 컨테이너에 런타임을 확인하거나 설치하세요.",
     "runtimeRequired": "먼저 컨테이너 런타임 설치"
   },

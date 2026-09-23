@@ -72,7 +72,7 @@
     "title": "Как создаются задачи",
     "body": "Задачи создаются в чате с ведущим агентом команды. Начните разговор с {{leader}}, чтобы создавать задачи и управлять ими."
   },
-  "editionCompare": "GoClaw Lite и Standard",
+  "editionCompare": "HNKT AI Lite и Standard",
   "editionUpgrade": "Перейдите на Standard с PostgreSQL для полного набора функций",
   "feature": "Функция",
   "edition": {

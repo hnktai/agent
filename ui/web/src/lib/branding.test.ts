@@ -7,10 +7,10 @@ describe("runtime branding", () => {
     document.head.innerHTML = "";
   });
 
-  it("falls back to built-in GoClaw branding", () => {
+  it("falls back to built-in HNKT AI branding", () => {
     expect(getRuntimeBranding()).toEqual({
-      appName: "GoClaw",
-      appShortName: "GoClaw",
+      appName: "HNKT AI",
+      appShortName: "HNKT AI",
       logoUrl: "/goclaw-icon.svg",
     });
   });

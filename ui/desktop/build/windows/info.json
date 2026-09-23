@@ -5,10 +5,10 @@
   "info": {
     "0409": {
       "ProductVersion": "0.1.0.0",
-      "CompanyName": "GoClaw",
-      "FileDescription": "GoClaw Lite Desktop — AI Agent Gateway",
-      "LegalCopyright": "Copyright (c) 2025-2026 GoClaw",
-      "ProductName": "GoClaw Lite",
+      "CompanyName": "HNKT AI",
+      "FileDescription": "HNKT AI Lite Desktop — AI Agent Gateway",
+      "LegalCopyright": "Copyright (c) 2025-2026 HNKT AI",
+      "ProductName": "HNKT AI Lite",
       "Comments": "Local AI agent desktop app powered by SQLite"
     }
   }

@@ -23,7 +23,7 @@ func onboardCmd() *cobra.Command {
 
 func runOnboard() {
 	fmt.Println("╔══════════════════════════════════════════════╗")
-	fmt.Println("║        GoClaw — Quick Setup                 ║")
+	fmt.Println("║        HNKT AI — Quick Setup                ║")
 	fmt.Println("╚══════════════════════════════════════════════╝")
 	fmt.Println()
 

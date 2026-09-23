@@ -465,7 +465,7 @@
     },
     "quota": {
       "checking": "할당량 확인 중",
-      "checkingDescription": "GoClaw가 이 별칭의 최신 할당량 상태를 가져오는 중입니다.",
+      "checkingDescription": "HNKT AI가 이 별칭의 최신 할당량 상태를 가져오는 중입니다.",
       "healthySummary": "{{usable}}개의 {{total}}개 할당량 준비됨",
       "needsAttention": "{{count}}개 별칭에 할당량 주의 필요",
       "blockersNow": "지금 차단 중",
@@ -477,7 +477,7 @@
       "readyDescription": "이 별칭은 현재 사용 가능한 할당량 창을 표시합니다.",
       "readinessTitle": "할당량 준비 상태",
       "readinessDescription": "여기서 먼저 확인하세요. 로그인된 별칭 중 사용 가능한 할당량이 있는 것만 실시간 트래픽에 신뢰해야 합니다.",
-      "requiresReadyAlias": "GoClaw가 할당량을 확인하려면 이 별칭이 로그인되어야 합니다.",
+      "requiresReadyAlias": "HNKT AI가 할당량을 확인하려면 이 별칭이 로그인되어야 합니다.",
       "failure": {
         "billing": {
           "label": "청구",
@@ -497,7 +497,7 @@
         },
         "needs_setup": {
           "label": "설정 필요",
-          "description": "GoClaw가 ChatGPT 계정 워크스페이스 메타데이터를 복원할 수 있도록 다시 로그인하세요."
+          "description": "HNKT AI가 ChatGPT 계정 워크스페이스 메타데이터를 복원할 수 있도록 다시 로그인하세요."
         },
         "retry_later": {
           "label": "나중에 재시도",
@@ -869,15 +869,15 @@
       "expertModeDesc": "없음, 최소, 자동, xhigh와 같은 모델별 추론 수준을 요청하고 선택된 모델이 지원하지 않을 때 발생하는 일을 제어합니다.",
       "supportedLevelsForModel": "선택된 모델 {{model}}은 이러한 명시적 추론 수준을 지원합니다.",
       "loadingSupport": "{{model}}에 대한 추론 기능 메타데이터를 불러오는 중.",
-      "unknownSupport": "GoClaw에는 아직 {{model}}에 대한 명시적 추론 메타데이터가 없습니다.",
+      "unknownSupport": "HNKT AI에는 아직 {{model}}에 대한 명시적 추론 메타데이터가 없습니다.",
       "expertModeUnavailable": "고급 추론 제어는 선택된 모델이 공급자 모델 엔드포인트의 명시적 기능 메타데이터를 가진 경우에만 사용 가능합니다.",
       "modelDefault": "모델 기본 추론: {{level}}",
       "requestedEffort": "요청된 노력",
-      "requestedEffortTip": "GoClaw가 선택된 모델에 대해 정규화하기 전 요청된 추론 수준입니다.",
+      "requestedEffortTip": "HNKT AI가 선택된 모델에 대해 정규화하기 전 요청된 추론 수준입니다.",
       "fallbackBehavior": "폴백 동작",
-      "fallbackBehaviorTip": "요청된 노력이 선택된 모델에서 지원되지 않을 때 GoClaw가 수행해야 할 작업입니다.",
+      "fallbackBehaviorTip": "요청된 노력이 선택된 모델에서 지원되지 않을 때 HNKT AI가 수행해야 할 작업입니다.",
       "supportedOption": "이 모델에서 지원됨",
-      "legacyShim": "GoClaw는 이전 빌드와의 하위 호환성을 위해 거친 thinking_level 심도 저장합니다.",
+      "legacyShim": "HNKT AI는 이전 빌드와의 하위 호환성을 위해 거친 thinking_level 심도 저장합니다.",
       "off": "끄기",
       "offDesc": "확장 사고 없음",
       "auto": "자동",
