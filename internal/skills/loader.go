@@ -122,7 +122,23 @@ func (l *Loader) resolveManagedDir(ctx context.Context) string {
 		tid = store.MasterTenantID
 	}
 	slug := store.TenantSlugFromContext(ctx)
-	return config.TenantSkillsStoreDir(l.dataDir, tid, slug)
+	dir := config.TenantSkillsStoreDir(l.dataDir, tid, slug)
+	if slug == "" && tid != store.MasterTenantID {
+		if _, err := os.Stat(dir); os.IsNotExist(err) {
+			tenantsBase := filepath.Join(l.dataDir, "tenants")
+			if entries, err := os.ReadDir(tenantsBase); err == nil {
+				for _, entry := range entries {
+					if entry.IsDir() {
+						candidate := filepath.Join(tenantsBase, entry.Name(), "skills-store")
+						if fi, err := os.Stat(candidate); err == nil && fi.IsDir() {
+							return candidate
+						}
+					}
+				}
+			}
+		}
+	}
+	return dir
 }
 
 // tenantCacheKey returns the tenant ID used to scope the in-memory info cache

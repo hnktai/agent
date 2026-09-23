@@ -83,6 +83,7 @@ type Loop struct {
 	// store.WithAgentID. See docs/agent-identity-conventions.md.
 	agentUUID uuid.UUID
 	tenantID  uuid.UUID // agent's owning tenant
+	tenantSlug string   // agent's owning tenant slug
 	// agentOtherConfig is a defensive byte copy of agents.other_config JSONB.
 	// Copied once at Loop construction; used to build AgentAudioSnapshot at tool dispatch.
 	agentOtherConfig json.RawMessage
@@ -364,6 +365,7 @@ type LoopConfig struct {
 	// Agent UUID + tenant for context propagation to tools
 	AgentUUID        uuid.UUID
 	TenantID         uuid.UUID       // agent's owning tenant — injected into execution context
+	TenantSlug       string          // agent's owning tenant slug — injected into execution context
 	AgentOtherConfig json.RawMessage // raw other_config JSONB — copied defensively in NewLoop
 	AgentType        string          // "open" or "predefined"
 	DisplayName      string          // human-readable agent display name (for runtime section)
@@ -525,6 +527,7 @@ func NewLoop(cfg LoopConfig) *Loop {
 		displayName:            cfg.DisplayName,
 		agentUUID:              cfg.AgentUUID,
 		tenantID:               cfg.TenantID,
+		tenantSlug:             cfg.TenantSlug,
 		agentOtherConfig:       append([]byte(nil), cfg.AgentOtherConfig...), // defensive copy
 		agentType:              cfg.AgentType,
 		provider:               cfg.Provider,

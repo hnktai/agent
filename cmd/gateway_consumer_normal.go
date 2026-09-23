@@ -33,6 +33,11 @@ func processNormalMessage(
 	// (agent lookup, session creation, etc.) are tenant-scoped.
 	if msg.TenantID != uuid.Nil {
 		ctx = store.WithTenantID(ctx, msg.TenantID)
+		if msg.TenantID != store.MasterTenantID && deps.TenantStore != nil {
+			if tenant, err := deps.TenantStore.GetTenant(ctx, msg.TenantID); err == nil && tenant != nil && tenant.Slug != "" {
+				ctx = store.WithTenantSlug(ctx, tenant.Slug)
+			}
+		}
 	} else {
 		ctx = store.WithTenantID(ctx, store.MasterTenantID)
 	}

@@ -64,6 +64,9 @@ func (l *Loop) injectContext(ctx context.Context, req *RunRequest) (contextSetup
 	if l.tenantID != uuid.Nil {
 		ctx = store.WithTenantID(ctx, l.tenantID)
 	}
+	if l.tenantSlug != "" {
+		ctx = store.WithTenantSlug(ctx, l.tenantSlug)
+	}
 	// Propagate the configured agent budget to every nested model call.
 	ctx = store.WithAgentContextWindow(ctx, l.contextWindow)
 	ctx = store.WithAgentMaxTokens(ctx, l.effectiveMaxTokens())

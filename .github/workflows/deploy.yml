@@ -47,8 +47,8 @@ jobs:
             chmod +x prepare-env.sh
             ./prepare-env.sh
 
-            echo "=== [4/5] Pulling Docker images and updating containers ==="
-            docker compose -f docker-compose.yml -f docker-compose.postgres.yml pull
+            echo "=== [4/5] Building Docker images and updating containers ==="
+            docker compose -f docker-compose.yml -f docker-compose.postgres.yml build goclaw
             docker compose -f docker-compose.yml -f docker-compose.postgres.yml up -d
 
             echo "=== [5/5] Running database migrations ==="

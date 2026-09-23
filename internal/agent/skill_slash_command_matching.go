@@ -26,7 +26,7 @@ func parseSkillSlashCommand(message, prefix string) (parsedSkillSlashCommand, bo
 	}
 	first, rest := cutFirstField(after)
 	switch strings.ToLower(first) {
-	case "list-skills":
+	case "list-skills", "listskill", "listskills", "skills", "skill":
 		return parsedSkillSlashCommand{verb: "list-skills"}, true
 	case "help":
 		if rest == "" {
