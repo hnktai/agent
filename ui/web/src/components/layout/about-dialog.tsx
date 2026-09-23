@@ -122,25 +122,7 @@ export function AboutDialog({ open, onOpenChange }: AboutDialogProps) {
             </div>
           )}
 
-          {/* Links */}
-          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
-            {[
-              { label: t("about.sourceCode"), href: "https://github.com/nextlevelbuilder/goclaw" },
-              { label: t("about.license"), href: "https://creativecommons.org/licenses/by-nc/4.0/" },
-              { label: t("about.documentation"), href: "https://docs.goclaw.sh" },
-              { label: t("about.reportBug"), href: "https://github.com/nextlevelbuilder/goclaw/issues" },
-            ].map(({ label, href }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline"
-              >
-                {label}
-              </a>
-            ))}
-          </div>
+
         </div>
 
         <DialogFooter showCloseButton />

@@ -81,16 +81,7 @@ export function AboutTab() {
         </button>
       </div>
 
-      <div className="text-xs text-text-muted">
-        <button
-          onClick={() => BrowserOpenURL('https://github.com/nextlevelbuilder/goclaw')}
-          className="text-accent hover:underline cursor-pointer"
-        >
-          GitHub
-        </button>
-        <span className="mx-2">·</span>
-        <span>{t('about.builtWith')}</span>
-      </div>
+
 
       {showReset && <ResetConfirmModal onClose={() => setShowReset(false)} />}
     </div>
