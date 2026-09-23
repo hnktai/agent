@@ -213,7 +213,12 @@ func (d *gatewayDeps) runLifecycle(
 		d.channelMgr.SetContactCollector(contactCollector)
 	}
 
-	go consumeInboundMessages(ctx, d.msgBus, d.agentRouter, d.cfg, deps.sched, d.channelMgr, deps.consumerTeamStore, d.pgStores.AgentLinks, deps.quotaChecker, d.pgStores.Sessions, d.pgStores.Agents, contactCollector, deps.postTurn, deps.subagentMgr, d.usageCapSvc, d.providerRegistry, d.teamWorkEmbedder)
+	var tenantStore store.TenantStore
+	if d.pgStores != nil {
+		tenantStore = d.pgStores.Tenants
+	}
+
+	go consumeInboundMessages(ctx, d.msgBus, d.agentRouter, d.cfg, deps.sched, d.channelMgr, deps.consumerTeamStore, d.pgStores.AgentLinks, deps.quotaChecker, d.pgStores.Sessions, d.pgStores.Agents, tenantStore, contactCollector, deps.postTurn, deps.subagentMgr, d.usageCapSvc, d.providerRegistry, d.teamWorkEmbedder)
 
 	// Webhook callback worker — delivers async webhook_calls rows to receiver callback_url.
 	// Runs in both editions: Standard (PG, concurrency=4) and Lite (SQLite, concurrency=1).
