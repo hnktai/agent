@@ -28,6 +28,7 @@ jobs:
           passphrase: ${{ secrets.VPS_SSH_PASSPHRASE }}
           password: ${{ secrets.VPS_PASSWORD }}
           port: ${{ secrets.VPS_PORT || 22 }}
+          command_timeout: 30m
           script_stop: true
           script: |
             echo "=== [1/5] Checking application directory ==="
@@ -41,6 +42,7 @@ jobs:
             cd /opt/goclaw
 
             echo "=== [2/5] Pulling latest code from GitHub ==="
+            git remote set-url origin https://github.com/hnktai/agent.git
             git fetch origin main
             git reset --hard origin/main
 
